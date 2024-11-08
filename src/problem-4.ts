@@ -10,15 +10,15 @@ type Rectangle = {
 
 type Shape = Circle | Rectangle;
 
-function calculateShapeArea(param: Shape) {
+function calculateShapeArea(param: Shape): number {
   if (param.shape === "circle") {
-    return (Math.PI * param.radius * param.radius).toFixed(2);
+    const areaOfCircle: number = parseFloat(
+      (Math.PI * param.radius * param.radius).toFixed(2)
+    );
+    return areaOfCircle;
   } else if (param.shape === "rectangle") {
-    return param.width * param.height;
+    const areaOfRectangle: number = param.width * param.height;
+    return areaOfRectangle;
   }
+  throw new Error("Please provide valid shape type");
 }
-
-// const result1 = calculateShapeArea({ shape: "circle", radius: 5 });
-// const result2 = calculateShapeArea({ shape: "rectangle", width: 4, height:6 });
-// console.log(result1);
-// console.log(result2);

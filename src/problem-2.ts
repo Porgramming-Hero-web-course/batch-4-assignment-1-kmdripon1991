@@ -5,4 +5,3 @@ function removeDuplicates(numbers: number[]): number[] {
   return arrayWithoutDuplicates;
 }
 
-// console.log(removeDuplicates([1, 2, 2, 5, 8, 100, 11, 5, 6, 8]))
